@@ -21,7 +21,7 @@ var labeltickets = [label1,label2,label3,label4];
 var labelescritorio =[escritorio1,escritorio2,escritorio3,escritorio4];
 
 socket.on('estadoActual',function(data){
-  // console.log(data);
+  console.log(data);
   // labeltickets[0].text('dasdasd');
   actualizar(data.ultimos4);
 });
@@ -38,7 +38,7 @@ function actualizar(ultimos4){
   // labelescritorio[0].text('asdasd');
   for(var i=0;i<=ultimos4.length-1; i++){
     labeltickets[i].text('Tickect ' + ultimos4[i].numero);
-    labelescritorio[i].text('Escritorio ' + ultimos4[1].escritorio);
+    labelescritorio[i].text('Escritorio ' + ultimos4[i].escritorio);
   }
 
 }
